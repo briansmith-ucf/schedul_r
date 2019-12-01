@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "480620258181",
+    "firebase_url": "https://schedulr-7df58.firebaseio.com",
+    "project_id": "schedulr-7df58",
+    "storage_bucket": "schedulr-7df58.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:480620258181:android:cd02c575693381c9ffdaec",
+        "android_client_info": {
+          "package_name": "sched.poop.schedulr"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "480620258181-fvonp3ir82f7kdprkr90ll8jm9sq0qe0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA1GuAtB_uMfILXAixRCJfwlER7qsQG76o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "480620258181-fvonp3ir82f7kdprkr90ll8jm9sq0qe0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
