@@ -48,6 +48,7 @@ class Course
         course_id : parsedJson['course_id'],
         description : parsedJson['description'],
         hours : parsedJson['hours'],
+        name: parsedJson['name']
     );
   }
 }

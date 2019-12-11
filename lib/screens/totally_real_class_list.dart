@@ -33,48 +33,44 @@ class Entry {
 // The entire multilevel list displayed by this app.
 final List<Entry> data = <Entry>[
   Entry(
+    'Spring 2020',
+    <Entry>[
+      Entry('Enjoyment of Music'),
+      Entry('Introduction to Philosophy'),
+      Entry('Computer Science II'),
+      Entry('Networks and Systems'),
+      Entry('Digital Systems'),
+        ],
+      ),
+      Entry(
+    'Fall 2020',
+    <Entry>[
+      Entry('Processes for Object-Oriented Software Development'),
+      Entry('Electronics I'),
+      Entry('Computer Organization'),
+      Entry('Operating Systems'),
+      Entry('Computer Logic and Organization'),
+        ],
+      ),
+      Entry(
+    'Spring 2021',
+    <Entry>[
+      Entry('Embedded Systems'),
+      Entry('Computer Architecture'),
+      Entry('Computer Communication Networks'),
+        ],
+      ),
+      Entry(
     'Fall',
     <Entry>[
-      Entry('Class 1'),
-      Entry('Class 1'),
-      Entry('Class 1'),
-      Entry('Class 1'),
+      Entry('Junior Design'),
+      Entry('Senior Design I'),
         ],
       ),
       Entry(
     'Spring',
     <Entry>[
-      Entry('Class 1'),
-      Entry('Class 1'),
-      Entry('Class 1'),
-      Entry('Class 1'),
-        ],
-      ),
-      Entry(
-    'Summer',
-    <Entry>[
-      Entry('Class 1'),
-      Entry('Class 1'),
-      Entry('Class 1'),
-      Entry('Class 1'),
-        ],
-      ),
-      Entry(
-    'Fall',
-    <Entry>[
-      Entry('Class 1'),
-      Entry('Class 1'),
-      Entry('Class 1'),
-      Entry('Class 1'),
-        ],
-      ),
-      Entry(
-    'Spring',
-    <Entry>[
-      Entry('Class 1'),
-      Entry('Class 1'),
-      Entry('Class 1'),
-      Entry('Class 1'),
+      Entry('Senior Design II'),
         ],
       ),
       Entry(

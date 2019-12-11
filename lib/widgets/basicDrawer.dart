@@ -18,7 +18,6 @@ class _BasicDrawerState extends State<BasicDrawer>  {
     String token;
     RouteSettings settings = ModalRoute.of(context).settings;
     token = settings.arguments;
-    print('Token is this in DRAWER:' + token);
     return Drawer(
       child: Container(
         padding: new EdgeInsets.all(32.0),
