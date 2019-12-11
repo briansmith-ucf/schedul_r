@@ -29,24 +29,16 @@ Future<LoginModel> requestLoginAPI(BuildContext context, String email, String pa
   print("got response!"); 
 
   if (response.statusCode == 200) {
-    print('status code is: ');
-    print(response.statusCode);
-    print('\nWE LOGGED IN');
     final responseJson = json.decode(response.body);
     var user = new LoginModel.fromJson(responseJson);
 
     token = responseJson['access_token'];
-    print('IS THIS TOKEN ANYTHING??!?!?');
-    print(token);
     saveCurrentLogin(responseJson);
     Navigator.of(context).pushNamed('/class', arguments: token);
 
     return LoginModel.fromJson(responseJson);
   } else {
     final responseJson = json.decode(response.body);
-    print('get fucked');
-    print(response.statusCode);
-    print(responseJson);
     saveCurrentLogin(responseJson);
     showDialogSingleButton(context, "Unable to Login", "You may have supplied an invalid 'Username' / 'Password' combination. Please try again or contact your support representative.", "OK");
     return null;
@@ -159,17 +151,12 @@ class LoginScreenState extends State<LoginScreen> {
                 Container(
                   height: 60.0,
                   child: Material(
-                    child: RaisedButton(
-                      color: Colors.amber[500],
-                      elevation: 7.0,
-                      shape: RoundedRectangleBorder(
-                                borderRadius: new BorderRadius.circular(30.0),
-                                side: BorderSide(color: Colors.amber[500])
-                              ),
-                        onPressed: () {
+                    child: GestureDetector(
+                        onTap: () {
                           SystemChannels.textInput.invokeMethod('TextInput.hide');
                           requestLoginAPI(context, _userNameController.text, _passwordController.text, token);
                         },
+                        onLongPress: () {Navigator.of(context).pushNamed('/class2');},
 
                       child: Center(
                         child: Text(

@@ -5,6 +5,7 @@
 import 'package:flutter/material.dart';
 import 'package:schedul_r/screens/login.dart';
 import 'package:schedul_r/screens/class_list.dart';
+import 'package:schedul_r/screens/totally_real_class_list.dart';
 
 void main() => runApp(MyApp());
 
@@ -19,6 +20,7 @@ class MyApp extends StatelessWidget
       routes: <String, WidgetBuilder>{
           '/': (context) => LoginScreen(),
         '/class': (context) => ClassList(),
+        '/class2': (context) => ExpansionTileSample()
       }
     );    
   }

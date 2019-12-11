@@ -13,8 +13,6 @@ import 'package:schedul_r/models/scheduleModel.dart';
 Future<Schedule> requestScheduleAPI(BuildContext context, String token) async {
   final url = "https://api.schedulr.xyz/gen_schedule";
   print('we are in request schedule api');
-  print(token);
-  print('is this a token?');
 
   Map<String, String> body = {
     "token": token
@@ -28,10 +26,10 @@ Future<Schedule> requestScheduleAPI(BuildContext context, String token) async {
   if (response.statusCode == 200) {
     final responseJson = json.decode(response.body);
     print('she was successful');
-    print(response.statusCode);
-    print(json.decode(response.body));
-    print("response body is: ");
-    print(response.body);
+    // print(response.statusCode);
+    // print(json.decode(response.body));
+    // print("response body is: ");
+    // print(response.body);
     var schedule = new Schedule.fromJson(responseJson);
 
     return Schedule.fromJson(responseJson);
@@ -56,6 +54,7 @@ class ClassList extends StatefulWidget {
 
 class _ClassListState extends State<ClassList> {
   Future<http.Response> _responseFuture;
+  Future<Schedule> schedule;
   String token;
   
 
@@ -63,8 +62,8 @@ class _ClassListState extends State<ClassList> {
   Widget build(BuildContext context) {
     RouteSettings settings = ModalRoute.of(context).settings;
     token = settings.arguments;
-    print('Token is this hopefully pls pls pls:' + token);
-    requestScheduleAPI(context, token);
+    // print('Token is this hopefully pls pls pls:' + token);
+    schedule = requestScheduleAPI(context, token);
     // var drawer = Drawer();
     return new Scaffold(
       drawer: Drawer(
