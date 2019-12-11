@@ -3,8 +3,8 @@
 // found in the LICENSE file.
 
 import 'package:flutter/material.dart';
-import 'package:schedul_r/routing_names.dart';
-import 'routes.dart' as routes;
+import 'package:schedul_r/screens/login.dart';
+import 'package:schedul_r/screens/class_list.dart';
 
 void main() => runApp(MyApp());
 
@@ -15,9 +15,12 @@ class MyApp extends StatelessWidget
   {
     return new MaterialApp(
       debugShowCheckedModeBanner: false,
-      onGenerateRoute: routes.generateRoute,
-      initialRoute: LoginViewRoute,
-    );
+      initialRoute: '/',
+      routes: <String, WidgetBuilder>{
+          '/': (context) => LoginScreen(),
+        '/class': (context) => ClassList(),
+      }
+    );    
   }
 }
 
